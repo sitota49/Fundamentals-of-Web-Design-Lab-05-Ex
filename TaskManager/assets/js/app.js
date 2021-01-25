@@ -61,7 +61,29 @@ function clearAllTasks() {
 
 function filterTasks(e) {
 
-    console.log("Task Filter ...");
+
+    if (filter.value === '') {
+        filter.style.borderColor = "red";
+
+        return;
+    }
+
+    e.preventDefault();
+
+    const userInput = filter.value;
+    const lists = document.querySelectorAll('.collection-item');
+
+    lists.forEach(list => {
+        if (list.textContent === userInput) {
+            list.style.display = 'block';
+        } else {
+            list.style.display = 'none';
+        }
+
+    });
+
+
+
 
 }
 
