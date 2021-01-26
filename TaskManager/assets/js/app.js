@@ -8,9 +8,12 @@ const taskList = document.querySelector('.collection');
 
 const clearBtn = document.querySelector('.clear-tasks');
 
-
+const asc = document.querySelector('.asc');
+const desc = document.querySelector('.desc');
 
 const reloadIcon = document.querySelector('.fa');
+
+let defaultState = 'asc';
 
 form.addEventListener('submit', addNewTask);
 
@@ -21,6 +24,8 @@ filter.addEventListener('keyup', filterTasks);
 taskList.addEventListener('click', removeTask);
 
 reloadIcon.addEventListener('click', reloadPage);
+asc.addEventListener('click', sort);
+desc.addEventListener('click', sort);
 
 
 function addNewTask(e) {
@@ -100,4 +105,23 @@ function removeTask(e) {
 function reloadPage() {
 
     location.reload();
+}
+
+function sort() {
+
+    const lis = document.querySelectorAll('.collection-item');
+    if (lis) {
+        taskList.removeChild(taskList.firstChild);
+        var i = lis.length;
+        while (i--) {
+            taskList.appendChild(lis[i]);
+        }
+
+
+    }
+
+    asc.classList.toggle("disabled");
+    desc.classList.toggle("disabled");
+
+
 }
