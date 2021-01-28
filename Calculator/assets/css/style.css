@@ -14,7 +14,7 @@
   width: 100%;
   height: 100px;
   padding: 40px 0;
-  background: #9003fc;
+  background: #d4d4d4;
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
 }
@@ -58,6 +58,6 @@ input[type="text"] {
   margin: 0 25px;
 }
 .spec {
-  background: #9003fc !important;
+  background: #d4d4d4 !important;
   color: #ffffff !important;
 }
