@@ -14,6 +14,7 @@
   width: 100%;
   height: 100px;
   padding: 40px 0;
+  padding-bottom: 40px;
   background: #d4d4d4;
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
@@ -47,7 +48,7 @@ input[type="text"] {
   height: 60px;
   float: left;
   padding: 0;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   border: none;
   background: none;
   color: #ffffff;
@@ -60,4 +61,8 @@ input[type="text"] {
 .spec {
   background: #d4d4d4 !important;
   color: #ffffff !important;
+}
+
+#spec2 {
+  width: 100%;
 }

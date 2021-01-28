@@ -15,6 +15,13 @@ let divide = function (num1, num2) {
     return num1 / num2;
 };
 
+
+let pow = function (num1, num2) {
+    return Math.pow(num1, num2);
+};
+
+
+
 const myCalc = {
     num1: null,
     operation: null,
@@ -69,6 +76,8 @@ function diginp(digit) {
     } else {
         myCalc.resultDisplay = resultDisplay === '0' ? digit : resultDisplay + digit;
     }
+
+    console.log(myCalc);
 
 
 }
@@ -131,7 +140,10 @@ function calculate(num1, num2, operator) {
         return multiply(num1, num2);
     } else if (operator === '/') {
         return divide(num1, num2);
+    } else if (operator === '^') {
+        return pow(num1, num2);
     }
+
 
     return num2;
 }
